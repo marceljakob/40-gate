@@ -1,21 +1,22 @@
-**Debug:**
+Debug:
   # diagnose debug reset
   # diagnose ip router bgp all enable
   # diagnose ip router bgp level info
   # diagnose debug enable
 
 Get Overview:
-get router info bgp summary 
-get router info bgp neighbors
-Idle: Initial state
-Connect: Waiting for a successful three-way TCP connection
-Active: Unable to establish the TCP session
-OpenSent: Waiting for an OPEN message from the peer
-OpenConfirm: Waiting for the keepalive message from the peer
-Established: Peers have successfully exchanged OPEN and keepalive messages
-Checking Received and Advertised Prefixes
-FGT01# get router info bgp neighbors <IP address of neighbor> received-routes
-FGT01# get router info bgp neighbors <IP address of neighbor> advertised-routes
+  # get router info bgp summary 
+  # get router info bgp neighbors
+  - Idle: Initial state
+  - Connect: Waiting for a successful three-way TCP connection
+  - Active: Unable to establish the TCP session
+  - OpenSent: Waiting for an OPEN message from the peer
+  - OpenConfirm: Waiting for the keepalive message from the peer
+  - Established: Peers have successfully exchanged OPEN and keepalive messages
+
+Checking Received and Advertised Prefixes:
+  # get router info bgp neighbors <IP address of neighbor> received-routes
+  # get router info bgp neighbors <IP address of neighbor> advertised-routes
 
 
 Restart BGP
