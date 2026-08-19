@@ -1,8 +1,8 @@
-Debug:
-FGT01# diagnose debug reset
-FGT01# diagnose ip router bgp all enable
-FGT01# diagnose ip router bgp level info
-FGT01# diagnose debug enable
+**Debug:**
+  # diagnose debug reset
+  # diagnose ip router bgp all enable
+  # diagnose ip router bgp level info
+  # diagnose debug enable
 
 Get Overview:
 get router info bgp summary 
