@@ -5,8 +5,9 @@
   _diagnose debug enable_  
 
 ### Get Overview:
-  # get router info bgp summary 
-  # get router info bgp neighbors
+  _get router info bgp summary_  
+  _get router info bgp neighbors_  
+  
   - Idle: Initial state
   - Connect: Waiting for a successful three-way TCP connection
   - Active: Unable to establish the TCP session
@@ -14,16 +15,17 @@
   - OpenConfirm: Waiting for the keepalive message from the peer
   - Established: Peers have successfully exchanged OPEN and keepalive messages
 
-Checking Received and Advertised Prefixes:
-  # get router info bgp neighbors <IP address of neighbor> received-routes
-  # get router info bgp neighbors <IP address of neighbor> advertised-routes
+### Checking Received and Advertised Prefixes:
+_get router info bgp neighbors <IP address of neighbor> received-routes_  
+_get router info bgp neighbors <IP address of neighbor> advertised-routes_  
 
 
-Restart BGP:
+### Restart BGP:
 To force a full exchange of BGP routing tables between peers:
 It’s also possible to perform a soft reset (without interruptions) by using the following command:
-  # execute router clear bgp ip <IP address of neighbor>
-  # execute router clear bgp all soft (in/out)
-  # execute router clear bgp ip <IP address of neighbor> soft (in/out)
+
+_execute router clear bgp ip <IP address of neighbor>_  
+_execute router clear bgp all soft (in/out)_  
+_execute router clear bgp ip <IP address of neighbor> soft (in/out)_  
   - in: refresh only received BGP routes.
   - out: refresh only advertised BGP routes.
