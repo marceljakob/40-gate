@@ -19,11 +19,11 @@ Checking Received and Advertised Prefixes:
   # get router info bgp neighbors <IP address of neighbor> advertised-routes
 
 
-Restart BGP
+Restart BGP:
 To force a full exchange of BGP routing tables between peers:
 It’s also possible to perform a soft reset (without interruptions) by using the following command:
-execute router clear bgp ip <IP address of neighbor>
-execute router clear bgp all soft (in/out)
-execute router clear bgp ip <IP address of neighbor> soft (in/out)
-in: refresh only received BGP routes.
-out: refresh only advertised BGP routes.
+  # execute router clear bgp ip <IP address of neighbor>
+  # execute router clear bgp all soft (in/out)
+  # execute router clear bgp ip <IP address of neighbor> soft (in/out)
+  - in: refresh only received BGP routes.
+  - out: refresh only advertised BGP routes.
