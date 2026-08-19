@@ -1,1 +1,4 @@
-
+Restart BGP
+execute router clear bgp ip <IP address of neighbor>
+execute router clear bgp all soft (in/out)
+execute router clear bgp ip <IP address of neighbor> soft (in/out)
