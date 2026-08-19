@@ -1,10 +1,10 @@
-Debug:
-  # diagnose debug reset
-  # diagnose ip router bgp all enable
-  # diagnose ip router bgp level info
-  # diagnose debug enable
+### Debug:
+  _diagnose debug reset_  
+  _diagnose ip router bgp all enable_  
+  _diagnose ip router bgp level info_  
+  _diagnose debug enable_  
 
-Get Overview:
+### Get Overview:
   # get router info bgp summary 
   # get router info bgp neighbors
   - Idle: Initial state
