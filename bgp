@@ -1,4 +1,28 @@
+Debug:
+FGT01# diagnose debug reset
+FGT01# diagnose ip router bgp all enable
+FGT01# diagnose ip router bgp level info
+FGT01# diagnose debug enable
+
+Get Overview:
+get router info bgp summary 
+get router info bgp neighbors
+Idle: Initial state
+Connect: Waiting for a successful three-way TCP connection
+Active: Unable to establish the TCP session
+OpenSent: Waiting for an OPEN message from the peer
+OpenConfirm: Waiting for the keepalive message from the peer
+Established: Peers have successfully exchanged OPEN and keepalive messages
+Checking Received and Advertised Prefixes
+FGT01# get router info bgp neighbors <IP address of neighbor> received-routes
+FGT01# get router info bgp neighbors <IP address of neighbor> advertised-routes
+
+
 Restart BGP
+To force a full exchange of BGP routing tables between peers:
+It’s also possible to perform a soft reset (without interruptions) by using the following command:
 execute router clear bgp ip <IP address of neighbor>
 execute router clear bgp all soft (in/out)
 execute router clear bgp ip <IP address of neighbor> soft (in/out)
+in: refresh only received BGP routes.
+out: refresh only advertised BGP routes.
