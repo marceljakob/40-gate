@@ -1,15 +1,15 @@
 ### Debug:
 ```
-  _diagnose debug reset_  
-  _diagnose ip router bgp all enable_  
-  _diagnose ip router bgp level info_  
-  _diagnose debug enable_
+diagnose debug reset
+diagnose ip router bgp all enable
+diagnose ip router bgp level info
+diagnose debug enable
 ```
 <br/><br/>
 ### Get Overview:
 ```
-  _get router info bgp summary_  
-  _get router info bgp neighbors_
+get router info bgp summary 
+get router info bgp neighbors
 ```
   
   - Idle: Initial state
@@ -21,17 +21,17 @@
 <br/><br/>
 ### Checking Received and Advertised Prefixes:
 ```
-_get router info bgp neighbors "IP address of neighbor" received-routes_  
-_get router info bgp neighbors "IP address of neighbor" advertised-routes_
+get router info bgp neighbors "IP address of neighbor" received-routes
+get router info bgp neighbors "IP address of neighbor" advertised-routes
 ```
 <br/><br/>
 ### Restart BGP:
 To force a full exchange of BGP routing tables between peers:
 It’s also possible to perform a soft reset (without interruptions) by using the following command:
 ```
-_execute router clear bgp ip "IP address of neighbor>"_    
-_execute router clear bgp all soft (in/out)_  
-_execute router clear bgp ip "IP address of neighbor" soft (in/out)_
+execute router clear bgp ip "IP address of neighbor>"   
+execute router clear bgp all soft (in/out)
+execute router clear bgp ip "IP address of neighbor" soft (in/out)
 ```
   - in: refresh only received BGP routes.
   - out: refresh only advertised BGP routes.
