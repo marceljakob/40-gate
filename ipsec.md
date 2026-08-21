@@ -13,23 +13,29 @@ diagnose vpn ike gateway list name <p1>
 diagnose vpn tunnel list → npu_flag / bytes
 
 ### Summary of all tunnels
+```
 get vpn ipsec tunnel summary
 get vpn ipsec tunnel details
 get vpn ipsec stats tunnel
 get vpn ipsec stats crypto
+```
 
 ### Phase 1 (IKE SA)
+```
 diagnose vpn ike gateway list
 diagnose vpn ike gateway list name <phase1-name>
+```
 
 Look for state: established. If the gateway is missing entirely,
 the FortiGate never even started negotiating — check the peer IP,
 the interface binding and whether the remote is reaching you at all.
 
 ### Phase 2 (IPsec SA)
+```
 diagnose vpn tunnel list
 diagnose vpn tunnel list name <phase1-name>
 diagnose vpn ike status
+```
 
 Key fields:
 - SA: created 1/1 — Phase 2 is up
