@@ -1,2 +1,31 @@
+VPN Troubleshooting:
+
+**get vpn ipsec tunnel summary**
+
+https://community.fortinet.com/t5/FortiGate/Troubleshooting-Tip-IPsec-VPNs-tunnels/ta-p/195955
+
+diagnose debug application ike -1 (Phase 1)
+
+diagnose debug application ike -1 (Phase 2)
+
+diag debug en (aktivieren)
+
+diag debug dis (deaktivieren)
+
+
+IKE Troubleshooting:
+
+Filter the IKE debugging log by using this command.
+
+**diag vpn ike log-filter name Tunnel_1**
+
+Here are the other options for the IKE filter:
+
+**diag debug app ike -1**
+
+**diag debug enable**
+
+
+
 
 https://community.fortinet.com/fortigate-3/troubleshooting-tip-troubleshooting-bgp-over-ipsec-196409
