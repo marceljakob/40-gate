@@ -1,3 +1,4 @@
+### Start
 1. Is Phase 1 up?
 diagnose vpn ike gateway list name <p1>
 2. Is Phase 2 up (SA=1)?
@@ -11,13 +12,13 @@ diagnose vpn ike gateway list name <p1>
 6. Counters incrementing?
 diagnose vpn tunnel list → npu_flag / bytes
 
-*** Summary of all tunnels
+### Summary of all tunnels
 get vpn ipsec tunnel summary
 get vpn ipsec tunnel details
 get vpn ipsec stats tunnel
 get vpn ipsec stats crypto
 
-*** Phase 1 (IKE SA)
+### Phase 1 (IKE SA)
 diagnose vpn ike gateway list
 diagnose vpn ike gateway list name <phase1-name>
 
@@ -25,7 +26,7 @@ Look for state: established. If the gateway is missing entirely,
 the FortiGate never even started negotiating — check the peer IP,
 the interface binding and whether the remote is reaching you at all.
 
-*** Phase 2 (IPsec SA)
+### Phase 2 (IPsec SA)
 diagnose vpn tunnel list
 diagnose vpn tunnel list name <phase1-name>
 diagnose vpn ike status
@@ -37,7 +38,7 @@ Key fields:
 - npu_flag=00 — no offload (expected on VM, or when offload is disabled)
 - dec:/enc: counters — if only one side increments, traffic is one-way
 
-*** VPN Troubleshooting:
+### Debugging:
 
 **get vpn ipsec tunnel summary**
 
