@@ -1,8 +1,5 @@
 ### Cloud Init Formatting:
 ```
-Content-Type: multipart/mixed; boundary="===============0266095039302191565=="
-MIME-Version: 1.0
- 
 --===============0266095039302191565==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
